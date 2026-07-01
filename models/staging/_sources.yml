@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: public
+    description: "Raw insurance database schema"
+    tables:
+      - name: agents
+      - name: policy_types
+      - name: customers
+      - name: policies
+      - name: claims
+      - name: claim_payments

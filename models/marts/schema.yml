@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_policies
+    description: "Staging model for insurance policies"
+    columns:
+      - name: policy_id
+        description: "Primary key for policies"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to customers"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+
+  - name: stg_claims
+    description: "Staging model for insurance claims"
+    columns:
+      - name: claim_id
+        description: "Primary key for claims"
+        tests:
+          - unique
+          - not_null
+      - name: policy_id
+        description: "Foreign key to policies"
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_policies')
+                field: policy_id
+
+  - name: claim_risk_report
+    description: "Final insurance claim risk report partitioned by city"
+    columns:
+      - name: risk_category
+        description: "Categorized risk based on claim ratio"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['High Risk', 'Medium Risk', 'Low Risk']
