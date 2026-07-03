@@ -7442,3 +7442,1036 @@ where value_field not in (
 [0m18:54:00.962891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171283528D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000171252690D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017128E5E3F0>]}
 [0m18:54:00.963401 [debug] [MainThread]: Flushing usage events
 [0m18:54:02.981401 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:48:50.278623 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022919DB3CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229176DD310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291C6DFC50>]}
+
+
+============================== 05:48:50.287878 | 05384d60-080d-4728-bdd2-8932d0aa80aa ==============================
+[0m05:48:50.287878 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m05:48:50.288611 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\User\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt build', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\User\\Downloads\\dbt_insurance_demo\\logs'}
+[0m05:48:50.648968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291C681CD0>]}
+[0m05:48:50.698961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291C49BBD0>]}
+[0m05:48:50.700153 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m05:48:50.902294 [debug] [MainThread]: checksum: f835d38e27f2c851a434d54286ec57eea49b211f2d0074fee97ef59e7c153b04, vars: {}, profile: insurance_profile, target: dev, version: 1.12.0b3
+[0m05:48:51.082453 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:48:51.082770 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:48:51.082964 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:48:51.115382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D198250>]}
+[0m05:48:51.184417 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\User\Downloads\dbt_insurance_demo\target\manifest.json
+[0m05:48:51.189392 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\User\Downloads\dbt_insurance_demo\target\semantic_manifest.json
+[0m05:48:51.220942 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\User\Downloads\dbt_insurance_demo\target\osi_document.json
+[0m05:48:51.251678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D3B37A0>]}
+[0m05:48:51.252100 [info ] [MainThread]: Found 9 models, 10 data tests, 6 sources, 475 macros
+[0m05:48:51.256204 [info ] [MainThread]: 
+[0m05:48:51.256511 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:48:51.256877 [info ] [MainThread]: 
+[0m05:48:51.257258 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m05:48:51.260542 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m05:48:51.424070 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m05:48:51.424383 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m05:48:51.424598 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:48:51.502598 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.078 seconds
+[0m05:48:51.503542 [debug] [ThreadPool]: On list_postgres: Close
+[0m05:48:51.505347 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m05:48:51.510329 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m05:48:51.510673 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m05:48:51.510919 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:48:51.605999 [debug] [ThreadPool]: SQL status: SELECT 15 in 0.095 seconds
+[0m05:48:51.607199 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m05:48:51.607977 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m05:48:51.613867 [debug] [MainThread]: Using postgres connection "master"
+[0m05:48:51.614264 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m05:48:51.614641 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:48:51.710885 [debug] [MainThread]: SQL status: SELECT 9 in 0.096 seconds
+[0m05:48:51.712801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D3FC130>]}
+[0m05:48:51.713130 [debug] [MainThread]: On master: ROLLBACK
+[0m05:48:51.713541 [debug] [MainThread]: On master: COMMIT
+[0m05:48:51.713801 [debug] [MainThread]: Using postgres connection "master"
+[0m05:48:51.714021 [debug] [MainThread]: On master: COMMIT
+[0m05:48:51.714398 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m05:48:51.714648 [debug] [MainThread]: On master: Close
+[0m05:48:51.719517 [debug] [Thread-2 (]: Began running node model.insurance_demo.stg_claim_payments
+[0m05:48:51.719951 [debug] [Thread-3 (]: Began running node model.insurance_demo.stg_claims
+[0m05:48:51.720239 [debug] [Thread-4 (]: Began running node model.insurance_demo.stg_customers
+[0m05:48:51.720506 [debug] [Thread-1 (]: Began running node model.insurance_demo.stg_agents
+[0m05:48:51.720842 [info ] [Thread-2 (]: 2 of 19 START sql view model public.stg_claim_payments ......................... [RUN]
+[0m05:48:51.722412 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.insurance_demo.stg_claim_payments'
+[0m05:48:51.722681 [debug] [Thread-2 (]: Began compiling node model.insurance_demo.stg_claim_payments
+[0m05:48:51.727108 [debug] [Thread-2 (]: Writing injected SQL for node "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.721212 [info ] [Thread-3 (]: 3 of 19 START sql view model public.stg_claims ................................. [RUN]
+[0m05:48:51.721588 [info ] [Thread-4 (]: 4 of 19 START sql view model public.stg_customers .............................. [RUN]
+[0m05:48:51.721972 [info ] [Thread-1 (]: 1 of 19 START sql view model public.stg_agents ................................. [RUN]
+[0m05:48:51.728508 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.insurance_demo.stg_agents'
+[0m05:48:51.728787 [debug] [Thread-1 (]: Began compiling node model.insurance_demo.stg_agents
+[0m05:48:51.727684 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.insurance_demo.stg_claims'
+[0m05:48:51.728093 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.insurance_demo.stg_customers'
+[0m05:48:51.731344 [debug] [Thread-4 (]: Began compiling node model.insurance_demo.stg_customers
+[0m05:48:51.733022 [debug] [Thread-4 (]: Writing injected SQL for node "model.insurance_demo.stg_customers"
+[0m05:48:51.731032 [debug] [Thread-3 (]: Began compiling node model.insurance_demo.stg_claims
+[0m05:48:51.730427 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance_demo.stg_agents"
+[0m05:48:51.730754 [debug] [Thread-2 (]: Began executing node model.insurance_demo.stg_claim_payments
+[0m05:48:51.734937 [debug] [Thread-3 (]: Writing injected SQL for node "model.insurance_demo.stg_claims"
+[0m05:48:51.760726 [debug] [Thread-2 (]: Writing runtime sql for node "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.761187 [debug] [Thread-4 (]: Began executing node model.insurance_demo.stg_customers
+[0m05:48:51.764707 [debug] [Thread-4 (]: Writing runtime sql for node "model.insurance_demo.stg_customers"
+[0m05:48:51.765132 [debug] [Thread-1 (]: Began executing node model.insurance_demo.stg_agents
+[0m05:48:51.767654 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance_demo.stg_agents"
+[0m05:48:51.768491 [debug] [Thread-3 (]: Began executing node model.insurance_demo.stg_claims
+[0m05:48:51.771190 [debug] [Thread-3 (]: Writing runtime sql for node "model.insurance_demo.stg_claims"
+[0m05:48:51.769117 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.771921 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claim_payments"} */
+
+  create view "postgres"."public"."stg_claim_payments__dbt_tmp"
+    
+    
+  as (
+    select
+    payment_id,
+    claim_id,
+    payment_date,
+    payment_amount
+from "postgres"."public"."claim_payments"
+  );
+[0m05:48:51.768833 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_customers"
+[0m05:48:51.772555 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_customers"} */
+
+  create view "postgres"."public"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    select
+    customer_id,
+    customer_name,
+    city
+from "postgres"."public"."customers"
+  );
+[0m05:48:51.772837 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m05:48:51.771519 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.stg_agents"
+[0m05:48:51.772217 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:48:51.773191 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.stg_claims"
+[0m05:48:51.773938 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claims"} */
+
+  create view "postgres"."public"."stg_claims__dbt_tmp"
+    
+    
+  as (
+    select
+    claim_id,
+    policy_id,
+    claim_date,
+    claim_amount
+from "postgres"."public"."claims"
+  );
+[0m05:48:51.774264 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m05:48:51.773507 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_agents"} */
+
+  create view "postgres"."public"."stg_agents__dbt_tmp"
+    
+    
+  as (
+    select
+    agent_id,
+    agent_name
+from "postgres"."public"."agents"
+  );
+[0m05:48:51.774668 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:48:51.856138 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.084 seconds
+[0m05:48:51.860787 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.861139 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claim_payments"} */
+alter table "postgres"."public"."stg_claim_payments" rename to "stg_claim_payments__dbt_backup"
+[0m05:48:51.861449 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.089 seconds
+[0m05:48:51.863700 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_customers"
+[0m05:48:51.864030 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_customers"} */
+alter table "postgres"."public"."stg_customers" rename to "stg_customers__dbt_backup"
+[0m05:48:51.864357 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.090 seconds
+[0m05:48:51.866767 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.stg_claims"
+[0m05:48:51.864883 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m05:48:51.864634 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.090 seconds
+[0m05:48:51.867087 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m05:48:51.867336 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claims"} */
+alter table "postgres"."public"."stg_claims" rename to "stg_claims__dbt_backup"
+[0m05:48:51.869073 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.870939 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.stg_agents"
+[0m05:48:51.873520 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_agents"} */
+alter table "postgres"."public"."stg_agents" rename to "stg_agents__dbt_backup"
+[0m05:48:51.873025 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claim_payments"} */
+alter table "postgres"."public"."stg_claim_payments__dbt_tmp" rename to "stg_claim_payments"
+[0m05:48:51.873302 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:51.872640 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_customers"
+[0m05:48:51.875862 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_customers"} */
+alter table "postgres"."public"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m05:48:51.875599 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m05:48:51.877911 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.stg_agents"
+[0m05:48:51.876136 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m05:48:51.875297 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.stg_claims"
+[0m05:48:51.878224 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_agents"} */
+alter table "postgres"."public"."stg_agents__dbt_tmp" rename to "stg_agents"
+[0m05:48:51.878468 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m05:48:51.891681 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: COMMIT
+[0m05:48:51.890626 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claims"} */
+alter table "postgres"."public"."stg_claims__dbt_tmp" rename to "stg_claims"
+[0m05:48:51.890272 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: COMMIT
+[0m05:48:51.892778 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.893104 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: COMMIT
+[0m05:48:51.892287 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_customers"
+[0m05:48:51.893754 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: COMMIT
+[0m05:48:51.892001 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:48:51.894819 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: COMMIT
+[0m05:48:51.895096 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.stg_agents"
+[0m05:48:51.893413 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:48:51.896315 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: COMMIT
+[0m05:48:51.897126 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.stg_claims"
+[0m05:48:51.895338 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: COMMIT
+[0m05:48:51.896878 [debug] [Thread-4 (]: SQL status: COMMIT in 0.003 seconds
+[0m05:48:51.901511 [debug] [Thread-4 (]: Applying DROP to: "postgres"."public"."stg_customers__dbt_backup"
+[0m05:48:51.897403 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: COMMIT
+[0m05:48:51.896603 [debug] [Thread-2 (]: SQL status: COMMIT in 0.003 seconds
+[0m05:48:51.901863 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m05:48:51.904760 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_customers"
+[0m05:48:51.906650 [debug] [Thread-2 (]: Applying DROP to: "postgres"."public"."stg_claim_payments__dbt_backup"
+[0m05:48:51.907005 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m05:48:51.908606 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."stg_agents__dbt_backup"
+[0m05:48:51.908999 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_customers"} */
+drop view if exists "postgres"."public"."stg_customers__dbt_backup" cascade
+[0m05:48:51.909663 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_claim_payments"
+[0m05:48:51.912156 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claim_payments"} */
+drop view if exists "postgres"."public"."stg_claim_payments__dbt_backup" cascade
+[0m05:48:51.911186 [debug] [Thread-3 (]: Applying DROP to: "postgres"."public"."stg_claims__dbt_backup"
+[0m05:48:51.912806 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.stg_claims"
+[0m05:48:51.911766 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.stg_agents"
+[0m05:48:51.913417 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_agents"} */
+drop view if exists "postgres"."public"."stg_agents__dbt_backup" cascade
+[0m05:48:51.913113 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_claims"} */
+drop view if exists "postgres"."public"."stg_claims__dbt_backup" cascade
+[0m05:48:51.915380 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m05:48:51.917611 [debug] [Thread-4 (]: On model.insurance_demo.stg_customers: Close
+[0m05:48:51.915984 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m05:48:51.915704 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m05:48:51.917952 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m05:48:51.919713 [debug] [Thread-1 (]: On model.insurance_demo.stg_agents: Close
+[0m05:48:51.920704 [debug] [Thread-2 (]: On model.insurance_demo.stg_claim_payments: Close
+[0m05:48:51.921606 [debug] [Thread-3 (]: On model.insurance_demo.stg_claims: Close
+[0m05:48:51.922880 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D6ED8B0>]}
+[0m05:48:51.924267 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D419E50>]}
+[0m05:48:51.923841 [info ] [Thread-4 (]: 4 of 19 OK created sql view model public.stg_customers ......................... [[32mCREATE VIEW[0m in 0.19s]
+[0m05:48:51.925042 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D940050>]}
+[0m05:48:51.926612 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291D90B250>]}
+[0m05:48:51.925804 [info ] [Thread-1 (]: 1 of 19 OK created sql view model public.stg_agents ............................ [[32mCREATE VIEW[0m in 0.19s]
+[0m05:48:51.927933 [debug] [Thread-4 (]: Finished running node model.insurance_demo.stg_customers
+[0m05:48:51.928882 [info ] [Thread-2 (]: 2 of 19 OK created sql view model public.stg_claim_payments .................... [[32mCREATE VIEW[0m in 0.20s]
+[0m05:48:51.930996 [debug] [Thread-2 (]: Finished running node model.insurance_demo.stg_claim_payments
+[0m05:48:51.931332 [debug] [Thread-2 (]: Began running node model.insurance_demo.stg_policy_types
+[0m05:48:51.930542 [debug] [Thread-4 (]: Began running node model.insurance_demo.stg_policies
+[0m05:48:51.929685 [info ] [Thread-3 (]: 3 of 19 OK created sql view model public.stg_claims ............................ [[32mCREATE VIEW[0m in 0.20s]
+[0m05:48:51.930179 [debug] [Thread-1 (]: Finished running node model.insurance_demo.stg_agents
+[0m05:48:51.931719 [info ] [Thread-2 (]: 6 of 19 START sql view model public.stg_policy_types ........................... [RUN]
+[0m05:48:51.933108 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.insurance_demo.stg_claim_payments, now model.insurance_demo.stg_policy_types)
+[0m05:48:51.933423 [debug] [Thread-2 (]: Began compiling node model.insurance_demo.stg_policy_types
+[0m05:48:51.932072 [info ] [Thread-4 (]: 5 of 19 START sql view model public.stg_policies ............................... [RUN]
+[0m05:48:51.932628 [debug] [Thread-3 (]: Finished running node model.insurance_demo.stg_claims
+[0m05:48:51.935275 [debug] [Thread-2 (]: Writing injected SQL for node "model.insurance_demo.stg_policy_types"
+[0m05:48:51.935657 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.insurance_demo.stg_customers, now model.insurance_demo.stg_policies)
+[0m05:48:51.936891 [debug] [Thread-4 (]: Began compiling node model.insurance_demo.stg_policies
+[0m05:48:51.938866 [debug] [Thread-4 (]: Writing injected SQL for node "model.insurance_demo.stg_policies"
+[0m05:48:51.936243 [debug] [Thread-1 (]: Began running node test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86
+[0m05:48:51.936560 [debug] [Thread-3 (]: Began running node test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912
+[0m05:48:51.939358 [info ] [Thread-1 (]: 7 of 19 START test not_null_stg_claims_claim_id ................................ [RUN]
+[0m05:48:51.940262 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance_demo.stg_agents, now test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86)
+[0m05:48:51.940937 [debug] [Thread-1 (]: Began compiling node test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86
+[0m05:48:51.948928 [debug] [Thread-1 (]: Writing injected SQL for node "test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86"
+[0m05:48:51.939843 [info ] [Thread-3 (]: 8 of 19 START test not_null_stg_claims_policy_id ............................... [RUN]
+[0m05:48:51.940631 [debug] [Thread-2 (]: Began executing node model.insurance_demo.stg_policy_types
+[0m05:48:51.952049 [debug] [Thread-2 (]: Writing runtime sql for node "model.insurance_demo.stg_policy_types"
+[0m05:48:51.949793 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.insurance_demo.stg_claims, now test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912)
+[0m05:48:51.949324 [debug] [Thread-4 (]: Began executing node model.insurance_demo.stg_policies
+[0m05:48:51.955026 [debug] [Thread-4 (]: Writing runtime sql for node "model.insurance_demo.stg_policies"
+[0m05:48:51.955396 [debug] [Thread-1 (]: Began executing node test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86
+[0m05:48:51.952660 [debug] [Thread-3 (]: Began compiling node test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912
+[0m05:48:51.970998 [debug] [Thread-3 (]: Writing injected SQL for node "test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912"
+[0m05:48:51.968010 [debug] [Thread-1 (]: Writing runtime sql for node "test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86"
+[0m05:48:51.971428 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_policy_types"
+[0m05:48:51.972020 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policy_types"} */
+
+  create view "postgres"."public"."stg_policy_types__dbt_tmp"
+    
+    
+  as (
+    select
+    policy_type_id,
+    policy_type_name
+from "postgres"."public"."policy_types"
+  );
+[0m05:48:51.972712 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:48:51.972432 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_policies"
+[0m05:48:51.973128 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policies"} */
+
+  create view "postgres"."public"."stg_policies__dbt_tmp"
+    
+    
+  as (
+    select
+    policy_id,
+    customer_id,
+    agent_id,
+    policy_type_id,
+    premium,
+    start_date
+from "postgres"."public"."policies"
+  );
+[0m05:48:51.973399 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:48:51.973786 [debug] [Thread-3 (]: Began executing node test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912
+[0m05:48:51.975390 [debug] [Thread-3 (]: Writing runtime sql for node "test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912"
+[0m05:48:51.976272 [debug] [Thread-1 (]: Using postgres connection "test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86"
+[0m05:48:51.976585 [debug] [Thread-1 (]: On test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select claim_id
+from "postgres"."public"."stg_claims"
+where claim_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:51.976886 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:48:51.977495 [debug] [Thread-3 (]: Using postgres connection "test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912"
+[0m05:48:51.977792 [debug] [Thread-3 (]: On test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select policy_id
+from "postgres"."public"."stg_claims"
+where policy_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:51.978049 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:48:52.045683 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.073 seconds
+[0m05:48:52.047901 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_policy_types"
+[0m05:48:52.048229 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policy_types"} */
+alter table "postgres"."public"."stg_policy_types" rename to "stg_policy_types__dbt_backup"
+[0m05:48:52.048890 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:52.050792 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_policy_types"
+[0m05:48:52.051111 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policy_types"} */
+alter table "postgres"."public"."stg_policy_types__dbt_tmp" rename to "stg_policy_types"
+[0m05:48:52.051708 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:52.052722 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: COMMIT
+[0m05:48:52.052991 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_policy_types"
+[0m05:48:52.053274 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: COMMIT
+[0m05:48:52.053964 [debug] [Thread-2 (]: SQL status: COMMIT in 0.000 seconds
+[0m05:48:52.055437 [debug] [Thread-2 (]: Applying DROP to: "postgres"."public"."stg_policy_types__dbt_backup"
+[0m05:48:52.055952 [debug] [Thread-2 (]: Using postgres connection "model.insurance_demo.stg_policy_types"
+[0m05:48:52.056257 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policy_types"} */
+drop view if exists "postgres"."public"."stg_policy_types__dbt_backup" cascade
+[0m05:48:52.056548 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.080 seconds
+[0m05:48:52.058941 [debug] [Thread-1 (]: On test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86: ROLLBACK
+[0m05:48:52.059315 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m05:48:52.060781 [debug] [Thread-2 (]: On model.insurance_demo.stg_policy_types: Close
+[0m05:48:52.059859 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.082 seconds
+[0m05:48:52.059585 [debug] [Thread-1 (]: On test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86: Close
+[0m05:48:52.061251 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DB89CD0>]}
+[0m05:48:52.062129 [debug] [Thread-3 (]: On test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912: ROLLBACK
+[0m05:48:52.062785 [info ] [Thread-2 (]: 6 of 19 OK created sql view model public.stg_policy_types ...................... [[32mCREATE VIEW[0m in 0.13s]
+[0m05:48:52.064160 [debug] [Thread-2 (]: Finished running node model.insurance_demo.stg_policy_types
+[0m05:48:52.064885 [debug] [Thread-2 (]: Began running node test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5
+[0m05:48:52.064544 [debug] [Thread-3 (]: On test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912: Close
+[0m05:48:52.063257 [info ] [Thread-1 (]: 7 of 19 PASS not_null_stg_claims_claim_id ...................................... [[32mPASS[0m in 0.12s]
+[0m05:48:52.066730 [debug] [Thread-1 (]: Finished running node test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86
+[0m05:48:52.065315 [info ] [Thread-2 (]: 9 of 19 START test unique_stg_claims_claim_id .................................. [RUN]
+[0m05:48:52.067636 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.insurance_demo.stg_policy_types, now test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5)
+[0m05:48:52.068199 [debug] [Thread-2 (]: Began compiling node test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5
+[0m05:48:52.066023 [info ] [Thread-3 (]: 8 of 19 PASS not_null_stg_claims_policy_id ..................................... [[32mPASS[0m in 0.12s]
+[0m05:48:52.073915 [debug] [Thread-3 (]: Finished running node test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912
+[0m05:48:52.073323 [debug] [Thread-2 (]: Writing injected SQL for node "test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5"
+[0m05:48:52.075914 [debug] [Thread-2 (]: Began executing node test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5
+[0m05:48:52.077898 [debug] [Thread-2 (]: Writing runtime sql for node "test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5"
+[0m05:48:52.081139 [debug] [Thread-2 (]: Using postgres connection "test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5"
+[0m05:48:52.081523 [debug] [Thread-2 (]: On test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    claim_id as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."stg_claims"
+where claim_id is not null
+group by claim_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.081800 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:48:52.172765 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.199 seconds
+[0m05:48:52.175010 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_policies"
+[0m05:48:52.175340 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policies"} */
+alter table "postgres"."public"."stg_policies" rename to "stg_policies__dbt_backup"
+[0m05:48:52.176018 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:52.177790 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_policies"
+[0m05:48:52.178058 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policies"} */
+alter table "postgres"."public"."stg_policies__dbt_tmp" rename to "stg_policies"
+[0m05:48:52.178592 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:52.179597 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: COMMIT
+[0m05:48:52.179874 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_policies"
+[0m05:48:52.180111 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: COMMIT
+[0m05:48:52.182130 [debug] [Thread-4 (]: SQL status: COMMIT in 0.002 seconds
+[0m05:48:52.183592 [debug] [Thread-4 (]: Applying DROP to: "postgres"."public"."stg_policies__dbt_backup"
+[0m05:48:52.184107 [debug] [Thread-4 (]: Using postgres connection "model.insurance_demo.stg_policies"
+[0m05:48:52.184376 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.stg_policies"} */
+drop view if exists "postgres"."public"."stg_policies__dbt_backup" cascade
+[0m05:48:52.184643 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.103 seconds
+[0m05:48:52.185694 [debug] [Thread-2 (]: On test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5: ROLLBACK
+[0m05:48:52.186052 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m05:48:52.187276 [debug] [Thread-4 (]: On model.insurance_demo.stg_policies: Close
+[0m05:48:52.186334 [debug] [Thread-2 (]: On test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5: Close
+[0m05:48:52.187783 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DAABA80>]}
+[0m05:48:52.188198 [info ] [Thread-2 (]: 9 of 19 PASS unique_stg_claims_claim_id ........................................ [[32mPASS[0m in 0.12s]
+[0m05:48:52.189325 [debug] [Thread-2 (]: Finished running node test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5
+[0m05:48:52.188643 [info ] [Thread-4 (]: 5 of 19 OK created sql view model public.stg_policies .......................... [[32mCREATE VIEW[0m in 0.25s]
+[0m05:48:52.190185 [debug] [Thread-4 (]: Finished running node model.insurance_demo.stg_policies
+[0m05:48:52.190845 [debug] [Thread-3 (]: Began running node model.insurance_demo.int_payments_per_policy
+[0m05:48:52.192530 [info ] [Thread-3 (]: 11 of 19 START sql view model public.int_payments_per_policy ................... [RUN]
+[0m05:48:52.193306 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.insurance_demo.not_null_stg_claims_policy_id.7e20e3e912, now model.insurance_demo.int_payments_per_policy)
+[0m05:48:52.194256 [debug] [Thread-3 (]: Began compiling node model.insurance_demo.int_payments_per_policy
+[0m05:48:52.191839 [debug] [Thread-1 (]: Began running node model.insurance_demo.int_claims_per_policy
+[0m05:48:52.194004 [debug] [Thread-2 (]: Began running node test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada
+[0m05:48:52.193737 [debug] [Thread-4 (]: Began running node test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c
+[0m05:48:52.197575 [debug] [Thread-3 (]: Writing injected SQL for node "model.insurance_demo.int_payments_per_policy"
+[0m05:48:52.198352 [info ] [Thread-1 (]: 10 of 19 START sql view model public.int_claims_per_policy ..................... [RUN]
+[0m05:48:52.199764 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.insurance_demo.not_null_stg_claims_claim_id.f8032ece86, now model.insurance_demo.int_claims_per_policy)
+[0m05:48:52.200150 [debug] [Thread-1 (]: Began compiling node model.insurance_demo.int_claims_per_policy
+[0m05:48:52.198765 [info ] [Thread-2 (]: 12 of 19 START test not_null_stg_policies_customer_id .......................... [RUN]
+[0m05:48:52.199164 [info ] [Thread-4 (]: 13 of 19 START test not_null_stg_policies_policy_id ............................ [RUN]
+[0m05:48:52.204120 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.insurance_demo.stg_policies, now test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c)
+[0m05:48:52.204447 [debug] [Thread-4 (]: Began compiling node test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c
+[0m05:48:52.203248 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance_demo.int_claims_per_policy"
+[0m05:48:52.204760 [debug] [Thread-3 (]: Began executing node model.insurance_demo.int_payments_per_policy
+[0m05:48:52.203740 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.insurance_demo.unique_stg_claims_claim_id.0e20e780e5, now test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada)
+[0m05:48:52.208087 [debug] [Thread-4 (]: Writing injected SQL for node "test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m05:48:52.210586 [debug] [Thread-3 (]: Writing runtime sql for node "model.insurance_demo.int_payments_per_policy"
+[0m05:48:52.211258 [debug] [Thread-2 (]: Began compiling node test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada
+[0m05:48:52.214937 [debug] [Thread-2 (]: Writing injected SQL for node "test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada"
+[0m05:48:52.215298 [debug] [Thread-1 (]: Began executing node model.insurance_demo.int_claims_per_policy
+[0m05:48:52.217641 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance_demo.int_claims_per_policy"
+[0m05:48:52.218608 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.int_payments_per_policy"
+[0m05:48:52.219691 [debug] [Thread-3 (]: On model.insurance_demo.int_payments_per_policy: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.int_payments_per_policy"} */
+
+  create view "postgres"."public"."int_payments_per_policy__dbt_tmp"
+    
+    
+  as (
+    with claims as (
+    select * from "postgres"."public"."stg_claims"
+),
+claim_payments as (
+    select * from "postgres"."public"."stg_claim_payments"
+)
+
+select 
+    c.policy_id,
+    sum(cp.payment_amount) as total_claim_payments
+from claims c 
+join claim_payments cp on cp.claim_id = c.claim_id
+where c.claim_date >= current_date - interval '12 months'
+group by c.policy_id
+  );
+[0m05:48:52.220357 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:48:52.219063 [debug] [Thread-2 (]: Began executing node test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada
+[0m05:48:52.219401 [debug] [Thread-4 (]: Began executing node test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c
+[0m05:48:52.220909 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.int_claims_per_policy"
+[0m05:48:52.223558 [debug] [Thread-2 (]: Writing runtime sql for node "test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada"
+[0m05:48:52.225290 [debug] [Thread-4 (]: Writing runtime sql for node "test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m05:48:52.225685 [debug] [Thread-1 (]: On model.insurance_demo.int_claims_per_policy: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.int_claims_per_policy"} */
+
+  create view "postgres"."public"."int_claims_per_policy__dbt_tmp"
+    
+    
+  as (
+    with claims as (
+    select * from "postgres"."public"."stg_claims"
+)
+
+select 
+    policy_id,
+    count(*) as claim_count,
+    sum(claim_amount) as total_claim_amount
+from claims
+where claim_date >= current_date - interval '12 months'
+group by policy_id
+  );
+[0m05:48:52.226244 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:48:52.228442 [debug] [Thread-2 (]: Using postgres connection "test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada"
+[0m05:48:52.229077 [debug] [Thread-2 (]: On test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from "postgres"."public"."stg_policies"
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.229384 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:48:52.228780 [debug] [Thread-4 (]: Using postgres connection "test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c"
+[0m05:48:52.229808 [debug] [Thread-4 (]: On test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select policy_id
+from "postgres"."public"."stg_policies"
+where policy_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.230062 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:48:52.336953 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.117 seconds
+[0m05:48:52.339115 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.int_payments_per_policy"
+[0m05:48:52.339455 [debug] [Thread-3 (]: On model.insurance_demo.int_payments_per_policy: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.int_payments_per_policy"} */
+alter table "postgres"."public"."int_payments_per_policy__dbt_tmp" rename to "int_payments_per_policy"
+[0m05:48:52.340168 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:52.341151 [debug] [Thread-3 (]: On model.insurance_demo.int_payments_per_policy: COMMIT
+[0m05:48:52.341434 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.int_payments_per_policy"
+[0m05:48:52.341675 [debug] [Thread-3 (]: On model.insurance_demo.int_payments_per_policy: COMMIT
+[0m05:48:52.342823 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m05:48:52.344409 [debug] [Thread-3 (]: Applying DROP to: "postgres"."public"."int_payments_per_policy__dbt_backup"
+[0m05:48:52.344973 [debug] [Thread-3 (]: Using postgres connection "model.insurance_demo.int_payments_per_policy"
+[0m05:48:52.345247 [debug] [Thread-3 (]: On model.insurance_demo.int_payments_per_policy: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.int_payments_per_policy"} */
+drop view if exists "postgres"."public"."int_payments_per_policy__dbt_backup" cascade
+[0m05:48:52.346103 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m05:48:52.347069 [debug] [Thread-3 (]: On model.insurance_demo.int_payments_per_policy: Close
+[0m05:48:52.347441 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.121 seconds
+[0m05:48:52.349889 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.int_claims_per_policy"
+[0m05:48:52.347894 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DB772F0>]}
+[0m05:48:52.350475 [debug] [Thread-1 (]: On model.insurance_demo.int_claims_per_policy: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.int_claims_per_policy"} */
+alter table "postgres"."public"."int_claims_per_policy__dbt_tmp" rename to "int_claims_per_policy"
+[0m05:48:52.351267 [info ] [Thread-3 (]: 11 of 19 OK created sql view model public.int_payments_per_policy .............. [[32mCREATE VIEW[0m in 0.15s]
+[0m05:48:52.352007 [debug] [Thread-3 (]: Finished running node model.insurance_demo.int_payments_per_policy
+[0m05:48:52.352644 [debug] [Thread-3 (]: Began running node test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852
+[0m05:48:52.352300 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:48:52.354249 [debug] [Thread-1 (]: On model.insurance_demo.int_claims_per_policy: COMMIT
+[0m05:48:52.354658 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.int_claims_per_policy"
+[0m05:48:52.352990 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.124 seconds
+[0m05:48:52.355825 [debug] [Thread-2 (]: On test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada: ROLLBACK
+[0m05:48:52.354911 [debug] [Thread-1 (]: On model.insurance_demo.int_claims_per_policy: COMMIT
+[0m05:48:52.353275 [info ] [Thread-3 (]: 14 of 19 START test relationships_stg_claims_policy_id__policy_id__ref_stg_policies_  [RUN]
+[0m05:48:52.356620 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.insurance_demo.int_payments_per_policy, now test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852)
+[0m05:48:52.357188 [debug] [Thread-3 (]: Began compiling node test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852
+[0m05:48:52.362637 [debug] [Thread-3 (]: Writing injected SQL for node "test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852"
+[0m05:48:52.356897 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m05:48:52.356321 [debug] [Thread-2 (]: On test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada: Close
+[0m05:48:52.364718 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.135 seconds
+[0m05:48:52.366356 [debug] [Thread-4 (]: On test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c: ROLLBACK
+[0m05:48:52.365118 [info ] [Thread-2 (]: 12 of 19 PASS not_null_stg_policies_customer_id ................................ [[32mPASS[0m in 0.16s]
+[0m05:48:52.364295 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."int_claims_per_policy__dbt_backup"
+[0m05:48:52.368268 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.int_claims_per_policy"
+[0m05:48:52.368949 [debug] [Thread-1 (]: On model.insurance_demo.int_claims_per_policy: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.int_claims_per_policy"} */
+drop view if exists "postgres"."public"."int_claims_per_policy__dbt_backup" cascade
+[0m05:48:52.367290 [debug] [Thread-2 (]: Finished running node test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada
+[0m05:48:52.369375 [debug] [Thread-2 (]: Began running node test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6
+[0m05:48:52.367676 [debug] [Thread-4 (]: On test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c: Close
+[0m05:48:52.368660 [debug] [Thread-3 (]: Began executing node test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852
+[0m05:48:52.371801 [debug] [Thread-3 (]: Writing runtime sql for node "test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852"
+[0m05:48:52.369724 [info ] [Thread-2 (]: 15 of 19 START test relationships_stg_policies_customer_id__customer_id__ref_stg_customers_  [RUN]
+[0m05:48:52.369980 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m05:48:52.374850 [debug] [Thread-1 (]: On model.insurance_demo.int_claims_per_policy: Close
+[0m05:48:52.373660 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.insurance_demo.not_null_stg_policies_customer_id.6c3638fada, now test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6)
+[0m05:48:52.372540 [info ] [Thread-4 (]: 13 of 19 PASS not_null_stg_policies_policy_id .................................. [[32mPASS[0m in 0.17s]
+[0m05:48:52.376464 [debug] [Thread-4 (]: Finished running node test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c
+[0m05:48:52.376772 [debug] [Thread-4 (]: Began running node test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6
+[0m05:48:52.376078 [debug] [Thread-3 (]: Using postgres connection "test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852"
+[0m05:48:52.375289 [debug] [Thread-2 (]: Began compiling node test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6
+[0m05:48:52.375743 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DC699D0>]}
+[0m05:48:52.377113 [info ] [Thread-4 (]: 16 of 19 START test unique_stg_policies_policy_id .............................. [RUN]
+[0m05:48:52.377472 [debug] [Thread-3 (]: On test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select policy_id as from_field
+    from "postgres"."public"."stg_claims"
+    where policy_id is not null
+),
+
+parent as (
+    select policy_id as to_field
+    from "postgres"."public"."stg_policies"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.381789 [debug] [Thread-2 (]: Writing injected SQL for node "test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6"
+[0m05:48:52.382503 [info ] [Thread-1 (]: 10 of 19 OK created sql view model public.int_claims_per_policy ................ [[32mCREATE VIEW[0m in 0.18s]
+[0m05:48:52.383970 [debug] [Thread-1 (]: Finished running node model.insurance_demo.int_claims_per_policy
+[0m05:48:52.383349 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:48:52.382963 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.insurance_demo.not_null_stg_policies_policy_id.83c6a6a32c, now test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6)
+[0m05:48:52.384902 [debug] [Thread-4 (]: Began compiling node test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6
+[0m05:48:52.388710 [debug] [Thread-4 (]: Writing injected SQL for node "test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6"
+[0m05:48:52.385410 [debug] [Thread-2 (]: Began executing node test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6
+[0m05:48:52.390381 [debug] [Thread-2 (]: Writing runtime sql for node "test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6"
+[0m05:48:52.391387 [debug] [Thread-4 (]: Began executing node test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6
+[0m05:48:52.392876 [debug] [Thread-4 (]: Writing runtime sql for node "test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6"
+[0m05:48:52.393251 [debug] [Thread-2 (]: Using postgres connection "test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6"
+[0m05:48:52.393647 [debug] [Thread-2 (]: On test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from "postgres"."public"."stg_policies"
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from "postgres"."public"."stg_customers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.393924 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:48:52.394819 [debug] [Thread-4 (]: Using postgres connection "test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6"
+[0m05:48:52.395159 [debug] [Thread-4 (]: On test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    policy_id as unique_field,
+    count(*) as n_records
+
+from "postgres"."public"."stg_policies"
+where policy_id is not null
+group by policy_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.395433 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:48:52.488982 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.106 seconds
+[0m05:48:52.490071 [debug] [Thread-3 (]: On test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852: ROLLBACK
+[0m05:48:52.490644 [debug] [Thread-3 (]: On test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852: Close
+[0m05:48:52.491179 [info ] [Thread-3 (]: 14 of 19 PASS relationships_stg_claims_policy_id__policy_id__ref_stg_policies_ . [[32mPASS[0m in 0.13s]
+[0m05:48:52.491626 [debug] [Thread-3 (]: Finished running node test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852
+[0m05:48:52.500692 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.107 seconds
+[0m05:48:52.501722 [debug] [Thread-2 (]: On test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6: ROLLBACK
+[0m05:48:52.502237 [debug] [Thread-2 (]: On test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6: Close
+[0m05:48:52.502769 [info ] [Thread-2 (]: 15 of 19 PASS relationships_stg_policies_customer_id__customer_id__ref_stg_customers_  [[32mPASS[0m in 0.13s]
+[0m05:48:52.503223 [debug] [Thread-2 (]: Finished running node test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6
+[0m05:48:52.508056 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.113 seconds
+[0m05:48:52.509115 [debug] [Thread-4 (]: On test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6: ROLLBACK
+[0m05:48:52.509682 [debug] [Thread-4 (]: On test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6: Close
+[0m05:48:52.510288 [info ] [Thread-4 (]: 16 of 19 PASS unique_stg_policies_policy_id .................................... [[32mPASS[0m in 0.13s]
+[0m05:48:52.510814 [debug] [Thread-4 (]: Finished running node test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6
+[0m05:48:52.511660 [debug] [Thread-1 (]: Began running node model.insurance_demo.claim_risk_report
+[0m05:48:52.512287 [info ] [Thread-1 (]: 17 of 19 START sql table model public.claim_risk_report ........................ [RUN]
+[0m05:48:52.512760 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.insurance_demo.int_claims_per_policy, now model.insurance_demo.claim_risk_report)
+[0m05:48:52.513087 [debug] [Thread-1 (]: Began compiling node model.insurance_demo.claim_risk_report
+[0m05:48:52.515617 [debug] [Thread-1 (]: Writing injected SQL for node "model.insurance_demo.claim_risk_report"
+[0m05:48:52.516993 [debug] [Thread-1 (]: Began executing node model.insurance_demo.claim_risk_report
+[0m05:48:52.531400 [debug] [Thread-1 (]: Writing runtime sql for node "model.insurance_demo.claim_risk_report"
+[0m05:48:52.534542 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.claim_risk_report"
+[0m05:48:52.534929 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.claim_risk_report"} */
+
+  
+    
+
+  create  table "postgres"."public"."claim_risk_report__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with policies as (
+    select * from "postgres"."public"."stg_policies"
+),
+customers as (
+    select * from "postgres"."public"."stg_customers"
+),
+agents as (
+    select * from "postgres"."public"."stg_agents"
+),
+policy_types as (
+    select * from "postgres"."public"."stg_policy_types"
+),
+claims_agg as (
+    select * from "postgres"."public"."int_claims_per_policy"
+),
+pay_agg as (
+    select * from "postgres"."public"."int_payments_per_policy"
+),
+report as (
+    select 
+        cu.customer_name,
+        cu.city,
+        pt.policy_type_name as policy_type,
+        ag.agent_name,
+        p.premium as total_premium_collected,
+        ca.total_claim_amount,
+        coalesce(pa.total_claim_payments, 0) as total_claim_payments,
+        ca.claim_count,
+        round(coalesce(pa.total_claim_payments, 0) * 100.0 / nullif(p.premium, 0), 2) as claim_ratio
+    from policies p
+    join customers cu on cu.customer_id = p.customer_id
+    join agents ag on ag.agent_id = p.agent_id
+    join policy_types pt on pt.policy_type_id = p.policy_type_id
+    join claims_agg ca on ca.policy_id = p.policy_id
+    left join pay_agg pa on pa.policy_id = p.policy_id
+    where ca.claim_count >= 2
+)
+
+select 
+    customer_name,
+    city,
+    policy_type,
+    agent_name,
+    total_premium_collected,
+    total_claim_amount,
+    total_claim_payments,
+    claim_ratio,
+    case
+        when claim_ratio > 80 then 'High Risk'
+        when claim_ratio >= 40 then 'Medium Risk'
+        else 'Low Risk'
+    end as risk_category,
+    rank() over(partition by city order by claim_ratio desc) as rank_in_city
+from report
+order by city, rank_in_city
+  );
+  
+[0m05:48:52.535242 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:48:52.630676 [debug] [Thread-1 (]: SQL status: SELECT 50 in 0.095 seconds
+[0m05:48:52.635225 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.claim_risk_report"
+[0m05:48:52.635557 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.claim_risk_report"} */
+alter table "postgres"."public"."claim_risk_report" rename to "claim_risk_report__dbt_backup"
+[0m05:48:52.636146 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m05:48:52.637884 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.claim_risk_report"
+[0m05:48:52.638188 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.claim_risk_report"} */
+alter table "postgres"."public"."claim_risk_report__dbt_tmp" rename to "claim_risk_report"
+[0m05:48:52.639295 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m05:48:52.640472 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: COMMIT
+[0m05:48:52.640779 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.claim_risk_report"
+[0m05:48:52.641063 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: COMMIT
+[0m05:48:52.643381 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m05:48:52.644937 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."claim_risk_report__dbt_backup"
+[0m05:48:52.646894 [debug] [Thread-1 (]: Using postgres connection "model.insurance_demo.claim_risk_report"
+[0m05:48:52.647213 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "model.insurance_demo.claim_risk_report"} */
+drop table if exists "postgres"."public"."claim_risk_report__dbt_backup" cascade
+[0m05:48:52.651909 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.004 seconds
+[0m05:48:52.652907 [debug] [Thread-1 (]: On model.insurance_demo.claim_risk_report: Close
+[0m05:48:52.653382 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '05384d60-080d-4728-bdd2-8932d0aa80aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DD23050>]}
+[0m05:48:52.653849 [info ] [Thread-1 (]: 17 of 19 OK created sql table model public.claim_risk_report ................... [[32mSELECT 50[0m in 0.14s]
+[0m05:48:52.654281 [debug] [Thread-1 (]: Finished running node model.insurance_demo.claim_risk_report
+[0m05:48:52.654885 [debug] [Thread-3 (]: Began running node test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9
+[0m05:48:52.655536 [debug] [Thread-2 (]: Began running node test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61
+[0m05:48:52.655207 [info ] [Thread-3 (]: 18 of 19 START test accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk  [RUN]
+[0m05:48:52.656347 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.insurance_demo.relationships_stg_claims_policy_id__policy_id__ref_stg_policies_.f863c76852, now test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9)
+[0m05:48:52.656639 [debug] [Thread-3 (]: Began compiling node test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9
+[0m05:48:52.663373 [debug] [Thread-3 (]: Writing injected SQL for node "test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9"
+[0m05:48:52.655951 [info ] [Thread-2 (]: 19 of 19 START test not_null_claim_risk_report_risk_category ................... [RUN]
+[0m05:48:52.663944 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.insurance_demo.relationships_stg_policies_customer_id__customer_id__ref_stg_customers_.b5a40ed1d6, now test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61)
+[0m05:48:52.664279 [debug] [Thread-2 (]: Began compiling node test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61
+[0m05:48:52.667293 [debug] [Thread-2 (]: Writing injected SQL for node "test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61"
+[0m05:48:52.668481 [debug] [Thread-3 (]: Began executing node test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9
+[0m05:48:52.670110 [debug] [Thread-3 (]: Writing runtime sql for node "test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9"
+[0m05:48:52.671020 [debug] [Thread-2 (]: Began executing node test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61
+[0m05:48:52.672492 [debug] [Thread-2 (]: Writing runtime sql for node "test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61"
+[0m05:48:52.672845 [debug] [Thread-3 (]: Using postgres connection "test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9"
+[0m05:48:52.673218 [debug] [Thread-3 (]: On test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        risk_category as value_field,
+        count(*) as n_records
+
+    from "postgres"."public"."claim_risk_report"
+    group by risk_category
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'High Risk','Medium Risk','Low Risk'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.673484 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:48:52.675382 [debug] [Thread-2 (]: Using postgres connection "test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61"
+[0m05:48:52.675707 [debug] [Thread-2 (]: On test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "insurance_profile", "target_name": "dev", "node_id": "test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select risk_category
+from "postgres"."public"."claim_risk_report"
+where risk_category is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:48:52.676123 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:48:52.762891 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.089 seconds
+[0m05:48:52.763962 [debug] [Thread-3 (]: On test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9: ROLLBACK
+[0m05:48:52.764424 [debug] [Thread-3 (]: On test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9: Close
+[0m05:48:52.764926 [info ] [Thread-3 (]: 18 of 19 PASS accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk  [[32mPASS[0m in 0.11s]
+[0m05:48:52.765368 [debug] [Thread-3 (]: Finished running node test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9
+[0m05:48:52.773837 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.098 seconds
+[0m05:48:52.774944 [debug] [Thread-2 (]: On test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61: ROLLBACK
+[0m05:48:52.775441 [debug] [Thread-2 (]: On test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61: Close
+[0m05:48:52.775992 [info ] [Thread-2 (]: 19 of 19 PASS not_null_claim_risk_report_risk_category ......................... [[32mPASS[0m in 0.11s]
+[0m05:48:52.776482 [debug] [Thread-2 (]: Finished running node test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61
+[0m05:48:52.778107 [debug] [MainThread]: On master: COMMIT
+[0m05:48:52.778449 [debug] [MainThread]: Using postgres connection "master"
+[0m05:48:52.778931 [debug] [MainThread]: On master: COMMIT
+[0m05:48:52.779361 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:48:52.866475 [debug] [MainThread]: SQL status: COMMIT in 0.087 seconds
+[0m05:48:52.866858 [debug] [MainThread]: On master: Close
+[0m05:48:52.867264 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:48:52.867491 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m05:48:52.867672 [debug] [MainThread]: Connection 'list_postgres_public' was properly closed.
+[0m05:48:52.867838 [debug] [MainThread]: Connection 'test.insurance_demo.not_null_claim_risk_report_risk_category.a715a78e61' was properly closed.
+[0m05:48:52.868017 [debug] [MainThread]: Connection 'test.insurance_demo.accepted_values_claim_risk_report_risk_category__High_Risk__Medium_Risk__Low_Risk.5d4ee805c9' was properly closed.
+[0m05:48:52.868199 [debug] [MainThread]: Connection 'test.insurance_demo.unique_stg_policies_policy_id.cb33dd12e6' was properly closed.
+[0m05:48:52.868363 [debug] [MainThread]: Connection 'model.insurance_demo.claim_risk_report' was properly closed.
+[0m05:48:52.870000 [info ] [MainThread]: 
+[0m05:48:52.870449 [info ] [MainThread]: Finished running 1 table model, 10 data tests, 8 view models in 0 hours 0 minutes and 1.61 seconds (1.61s).
+[0m05:48:52.872417 [debug] [MainThread]: Command end result
+[0m05:48:52.891457 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\User\Downloads\dbt_insurance_demo\target\manifest.json
+[0m05:48:52.894998 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\User\Downloads\dbt_insurance_demo\target\semantic_manifest.json
+[0m05:48:52.898090 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\User\Downloads\dbt_insurance_demo\target\osi_document.json
+[0m05:48:52.905129 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\User\Downloads\dbt_insurance_demo\target\run_results.json
+[0m05:48:52.905447 [info ] [MainThread]: 
+[0m05:48:52.905733 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:48:52.905985 [info ] [MainThread]: 
+[0m05:48:52.906328 [info ] [MainThread]: Done. PASS=19 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=19
+[0m05:48:52.907035 [debug] [MainThread]: Command `dbt build` succeeded at 05:48:52.906914 after 2.86 seconds
+[0m05:48:52.907343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291C742E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291A28E3F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002291DEB2570>]}
+[0m05:48:52.907610 [debug] [MainThread]: Flushing usage events
+[0m05:48:54.890961 [debug] [MainThread]: An error was encountered while trying to flush usage events
